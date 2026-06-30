@@ -13,20 +13,6 @@
           }
         ]
       }
-    },
-    {
-      "server": {
-        "name": "figma",
-        "title": "Figma MCP",
-        "description": "Interact with Figma designs through MCP.",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "http",
-            "url": "https://mcp.figma.com/mcp"
-          }
-        ]
-      }
     }
   ]
 }
