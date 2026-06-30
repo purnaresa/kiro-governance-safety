@@ -6,27 +6,10 @@
         "title": "AWS MCP",
         "description": "Interact with AWS services through natural language via MCP proxy.",
         "version": "1.0.0",
-        "packages": [
+        "remotes": [
           {
-            "registryType": "pypi",
-            "identifier": "mcp-proxy-for-aws",
-            "transport": {
-              "type": "stdio"
-            },
-            "packageArguments": [
-              {
-                "type": "positional",
-                "value": "https://aws-mcp.us-east-1.api.aws/mcp"
-              },
-              {
-                "type": "positional",
-                "value": "--metadata"
-              },
-              {
-                "type": "positional",
-                "value": "AWS_REGION=us-east-1"
-              }
-            ]
+            "type": "streamable-http",
+            "url": "https://aws-mcp.us-east-1.api.aws/mcp"
           }
         ]
       }
