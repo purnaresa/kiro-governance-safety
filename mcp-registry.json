@@ -1,0 +1,60 @@
+{
+  "servers": [
+    {
+      "server": {
+        "name": "my-remote-server",
+        "title": "My server",
+        "description": "My server description",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://acme.com/my-server",
+            "headers": [
+              {
+                "name": "X-My-Header",
+                "value": "SomeValue"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "my-local-server",
+        "title": "My server",
+        "description": "My server description",
+        "version": "1.0.0",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://npm.acme.com",
+            "identifier": "@acme/my-server",
+            "transport": {
+              "type": "stdio"
+            },
+            "runtimeArguments": [
+              {
+                "type": "positional",
+                "value": "-q"
+              }
+            ],
+            "packageArguments": [
+              {
+                "type": "positional",
+                "value": "start"
+              }
+            ],
+            "environmentVariables": [
+              {
+                "name": "ENV_VAR",
+                "value": "ENV_VAR_VALUE"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
