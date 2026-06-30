@@ -2,54 +2,29 @@
   "servers": [
     {
       "server": {
-        "name": "my-remote-server",
-        "title": "My server",
-        "description": "My server description",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://acme.com/my-server",
-            "headers": [
-              {
-                "name": "X-My-Header",
-                "value": "SomeValue"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "server": {
-        "name": "my-local-server",
-        "title": "My server",
-        "description": "My server description",
+        "name": "aws-mcp",
+        "title": "AWS MCP",
+        "description": "Interact with AWS services through natural language via MCP proxy.",
         "version": "1.0.0",
         "packages": [
           {
-            "registryType": "npm",
-            "registryBaseUrl": "https://npm.acme.com",
-            "identifier": "@acme/my-server",
+            "registryType": "pypi",
+            "identifier": "mcp-proxy-for-aws",
             "transport": {
               "type": "stdio"
             },
-            "runtimeArguments": [
-              {
-                "type": "positional",
-                "value": "-q"
-              }
-            ],
             "packageArguments": [
               {
                 "type": "positional",
-                "value": "start"
-              }
-            ],
-            "environmentVariables": [
+                "value": "https://aws-mcp.us-east-1.api.aws/mcp"
+              },
               {
-                "name": "ENV_VAR",
-                "value": "ENV_VAR_VALUE"
+                "type": "positional",
+                "value": "--metadata"
+              },
+              {
+                "type": "positional",
+                "value": "AWS_REGION=us-east-1"
               }
             ]
           }
